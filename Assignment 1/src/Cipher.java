@@ -12,7 +12,7 @@ public class Cipher {
 		System.out.println("Programming Fundamentals");
 		System.out.println("NAME: Michael Carrasco");
 		System.out.println("PROGRAMMING ASSIGNMENT 1");
-		System.out.println("\nWelcome to the Cipher program");
+		System.out.println("\nWelcome to the Cipher program.");
 		
 		Random rand= new Random();
 		Scanner input = new Scanner(System.in);
@@ -21,19 +21,28 @@ public class Cipher {
 		int []integer= new int[5]; //creates an array that can hold 5 values
 		System.out.println("Please enter 5 numbers between 0 and 19");
 		
+		
 		for (int i=0; i<5; i++) {
-			integer[i] = input.nextInt(); //User input for integers
-			sum = sum + integer[i]; //sums integers into plainText(unencoded number)
+			System.out.print("1st number: ");
+			integer[0] = input.nextInt(); //User input for integers
+			i++;
+			System.out.print("2nd number: ");
+			integer[1] = input.nextInt(); //User input for integers
+			i++;
+			System.out.print("3rd number: ");
+			integer[2] = input.nextInt(); //User input for integers
+			i++;
+			System.out.print("4th number: ");
+			integer[3] = input.nextInt(); //User input for integers
+			i++;
+			System.out.print("5th number: ");
+			integer[4] = input.nextInt(); //User input for integers
+			sum = sum + integer[0] + integer[1] + integer[2] + integer[3] + integer[4]; //sums integers into plainText(unencoded number)
 			if (integer[i] < 0 || integer[i] > 19 ) {
 				System.out.println("Please read directions and try again!");
 				System.exit(0);
 			}
 		}
-		System.out.println("1st number: " +integer[0]);
-		System.out.println("2nd number: " +integer[1]);
-		System.out.println("3rd number: " +integer[2]);
-		System.out.println("4th number: " +integer[3]);
-		System.out.println("5th number: " +integer[4]);
 		System.out.println("\nTotal = "+sum);
 		
 		int key=rand.nextInt(10); //Randomizes value from 0 to 9(inclusive)
